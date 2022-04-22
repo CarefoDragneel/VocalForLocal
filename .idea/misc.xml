@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable/edit_text_bg.xml" value="0.123" />
+        <entry key="app/src/main/res/drawable/edit_text_bg1.xml" value="0.19" />
+        <entry key="app/src/main/res/drawable/ic_dollor_bag_money.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_forum.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/vie_log.xml" value="0.19" />
+        <entry key="app/src/main/res/layout/activity_login_sign_up.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_walk_through.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/fragment_login_tab.xml" value="0.18177083333333333" />
+        <entry key="app/src/main/res/layout/fragment_sign_up_tab.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/slider_layout.xml" value="0.35625" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
