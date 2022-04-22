@@ -19,8 +19,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="0dp"
-        app:mbn_backgroundBottomColor="#B0BEC5"
-        app:mbn_circleColor="#546E7A"
+        app:mbn_backgroundBottomColor="#BCAAA4"
+        app:mbn_circleColor="#8D6E63"
         app:mbn_countBackgroundColor="#78909C"
         app:mbn_countTextColor="#ffffff"
         app:mbn_defaultIconColor="#ffffff"
@@ -65,7 +65,5 @@
                 app:navigationIcon="@drawable/menu_icon" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.drawerlayout.widget.DrawerLayout>
-
-
 
 </RelativeLayout>
