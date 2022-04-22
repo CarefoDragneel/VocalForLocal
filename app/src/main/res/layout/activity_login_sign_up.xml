@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".login_and_signUp.LoginSignUp"
-    android:background="@color/Blue_grey">
+    android:background="@color/green_200">
     <ImageView
         android:id="@+id/image_view2"
         android:layout_width="wrap_content"
@@ -86,18 +86,31 @@
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/image_view3"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:src="@drawable/clock"
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
         app:layout_constraintBottom_toTopOf="@+id/constraint_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/image_view2"
+        app:lottie_rawRes="@raw/shop"
+        app:lottie_autoPlay="true"
         app:layout_constraintVertical_bias=".3"
+        app:lottie_loop="true"
         />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/image_view3"-->
+<!--        android:layout_width="60dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:src="@drawable/clock"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/constraint_layout"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="@+id/image_view2"-->
+<!--        app:layout_constraintVertical_bias=".3"-->
+<!--        />-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

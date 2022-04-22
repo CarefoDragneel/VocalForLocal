@@ -5,6 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.vocalforlocal.LoginAdapter;
 import com.example.vocalforlocal.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -12,7 +13,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class LoginSignUp extends AppCompatActivity {
     public static final String TAG = "TAG";
-
+    LottieAnimationView lottieAnimationView;
     TabLayout tabLayout;
     ViewPager viewPager;
     FloatingActionButton fb, google;
@@ -32,6 +33,9 @@ public class LoginSignUp extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText("SignUp"));
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+        lottieAnimationView = findViewById(R.id.animation);
+        lottieAnimationView.animate().translationY(0).setDuration(1000).setStartDelay(3500);
+
 
         final LoginAdapter adapter = new LoginAdapter(getSupportFragmentManager(), this, tabLayout.getTabCount());
         viewPager.setAdapter(adapter);
@@ -43,7 +47,6 @@ public class LoginSignUp extends AppCompatActivity {
                 int position = tab.getPosition();
                 viewPager.setCurrentItem(position);
             }
-
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
             }
