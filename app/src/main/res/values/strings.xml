@@ -17,5 +17,7 @@
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
     <string name="add_product_button">add product</string>
+    <string name="pick_the_image">Pick the Image</string>
+    <string name="product_item_save">Save</string>
 
 </resources>

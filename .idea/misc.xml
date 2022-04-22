@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/add_photo_icon.xml" value="0.1515" />
+        <entry key="app/src/main/res/drawable/arrow_icon.xml" value="0.1515" />
         <entry key="app/src/main/res/drawable/edit_text_bg.xml" value="0.123" />
         <entry key="app/src/main/res/drawable/edit_text_bg1.xml" value="0.19" />
         <entry key="app/src/main/res/drawable/ic_dollor_bag_money.xml" value="0.1735" />
@@ -13,9 +15,10 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_splash_screen.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_walk_through.xml" value="0.35625" />
+        <entry key="app/src/main/res/layout/add_new_product_layout.xml" value="0.16802536231884058" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_login_tab.xml" value="0.18177083333333333" />
-        <entry key="app/src/main/res/layout/fragment_my_products.xml" value="0.16802536231884058" />
+        <entry key="app/src/main/res/layout/fragment_my_products.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_sign_up_tab.xml" value="0.1" />
         <entry key="app/src/main/res/layout/slider_layout.xml" value="0.35625" />
       </map>

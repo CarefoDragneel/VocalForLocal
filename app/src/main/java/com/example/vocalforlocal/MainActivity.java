@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             public void onReselectItem(MeowBottomNavigation.Model item) {
             }
         });
-        bottomNavigation.show(2, true);
+        bottomNavigation.show(1, true);
     }
 
     private void loadfragment(Fragment fragment) {
