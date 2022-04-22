@@ -3,11 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/calender_icon.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/button_bg.xml" value="0.115" />
         <entry key="app/src/main/res/drawable/edit_text_bg.xml" value="0.123" />
         <entry key="app/src/main/res/drawable/edit_text_bg1.xml" value="0.19" />
         <entry key="app/src/main/res/drawable/ic_dollor_bag_money.xml" value="0.1735" />
         <entry key="app/src/main/res/drawable/ic_forum.xml" value="0.1735" />
         <entry key="app/src/main/res/drawable/ic_home.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/logout_icon.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/menu_icon.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/notes_icon.xml" value="0.1735" />
         <entry key="app/src/main/res/drawable/vie_log.xml" value="0.19" />
         <entry key="app/src/main/res/layout/activity_login_sign_up.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18177083333333333" />
@@ -16,7 +21,10 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_login_tab.xml" value="0.18177083333333333" />
         <entry key="app/src/main/res/layout/fragment_sign_up_tab.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/header.xml" value="0.290625" />
         <entry key="app/src/main/res/layout/slider_layout.xml" value="0.35625" />
+        <entry key="app/src/main/res/menu/main_drawer_menu.xml" value="0.2671875" />
+        <entry key="app/src/main/res/menu/menu_calender.xml" value="0.290625" />
       </map>
     </option>
   </component>

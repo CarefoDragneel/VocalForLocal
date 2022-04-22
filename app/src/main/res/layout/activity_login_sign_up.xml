@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".login_and_signUp.LoginSignUp"
     android:background="@color/green_200">
+
     <ImageView
         android:id="@+id/image_view2"
         android:layout_width="wrap_content"
@@ -31,6 +32,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1"
         >
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tab_layout"
             android:background="@drawable/edit_text_bg1"
@@ -83,7 +85,6 @@
             app:layout_constraintStart_toEndOf="@id/fab_google"
             app:layout_constraintTop_toBottomOf="@id/view_pager"
             />
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
     <com.airbnb.lottie.LottieAnimationView
