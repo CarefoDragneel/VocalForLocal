@@ -4,15 +4,15 @@
     <string name="calender">Calender</string>
 
     //Heangs
-    <string name="heading_one">Calender</string>
-    <string name="heading_two">To Do List</string>
-    <string name="heading_three">Take Notes</string>
+    <string name="heading_one">Purchase Desi Products</string>
+    <string name="heading_two">Sell Your Desi Products</string>
+    <string name="heading_three">Reach Nearest Vendor</string>
     <string name="heading_fourth">Pay Anywhere</string>
 
     //Description
-    <string name="desc_one">You can add imporatant events with date and small notes</string>
-    <string name="desc_two">Add your tasks here , It will make your works smooth</string>
-    <string name="desc_three">We should write down every important thing,Make this your habit</string>
+    <string name="desc_one">Get exciting and awesome products from your local vendor</string>
+    <string name="desc_two">Easily sell your products that are made in India</string>
+    <string name="desc_three">Use map to navigate to your nearest vendor</string>
     <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
     <string name="navigation_drawer_open">Open Navigation Drawer</string>
     <string name="navigation_drawer_close">Close Navigation Drawer</string>
