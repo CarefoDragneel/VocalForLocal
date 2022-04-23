@@ -62,7 +62,7 @@
             android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:src="@drawable/right_arrow"/>
+            android:src="@drawable/delete"/>
 
 
     </RelativeLayout>
