@@ -27,12 +27,6 @@ public class ProductAdapter extends ArrayAdapter<Products> {
     private TextView mProductNameView;
     private TextView mCategoryView;
 
-    //creating firebase database and its reference
-    private FirebaseDatabase mDatabase;
-    private DatabaseReference mProductReference;
-
-    // creating child event listener to know when database is changed
-    private ChildEventListener mListener;
 
     //defining array adapter
     ProductAdapter mProductAdapter;
@@ -64,7 +58,7 @@ public class ProductAdapter extends ArrayAdapter<Products> {
 
         //setting texts in various views
         mProductNameView.setText(productItem.getProduct_item_name());
-        mCategoryView.setText(category);
+        mCategoryView.setText("CATEGORY: "+category);
 
         return listview;
     }

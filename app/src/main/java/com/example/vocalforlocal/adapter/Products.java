@@ -3,16 +3,16 @@ package com.example.vocalforlocal.adapter;
 public class Products {
 
     // item name
-    private String product_item_name="";
+    private String product_item_name;
 
     // item description
-    private String product_item_description="";
+    private String product_item_description;
 
     // item photo
-    private String product_item_photo_url="";
+    private String product_item_photo_url;
 
     // item category
-    private int product_item_category=0;
+    private int product_item_category;
 
     //item price
     private int product_item_price;
@@ -28,14 +28,19 @@ public class Products {
     public final static int FOOTWEAR = 3;
     public final static int SPORTS = 4;
 
+    // always create a default constructor otherwise this can cause a lot of hassle
     public Products(){}
 
+
+
+    // constructor to initialise values
     public Products(String n,int c,String d,String p){
         product_item_name = n;
         product_item_category = c;
         product_item_description = d;
         product_item_photo_url = p;
     }
+
 
     public String getProduct_item_name() {
         return product_item_name;

@@ -9,8 +9,9 @@
 
     <Button
         android:id="@+id/add_product_button"
-        android:layout_alignParentTop="true"
+        android:layout_gravity="center"
         android:layout_centerHorizontal="true"
+        android:layout_margin="4dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/add_product_button" />
@@ -18,8 +19,11 @@
     <ListView
         android:id="@+id/product_list"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/product_list_items"/>
+        android:layout_height="668dp"
+        android:layout_marginTop="50dp"
+        android:transcriptMode="alwaysScroll"
+        android:divider="@android:color/transparent"
+        tools:listitem="@layout/product_list_items" />
 
 
 </RelativeLayout>

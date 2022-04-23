@@ -1,5 +1,6 @@
 package com.example.vocalforlocal;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,8 +22,14 @@ import android.widget.Toast;
 
 import com.example.vocalforlocal.adapter.Products;
 import com.github.dhaval2404.imagepicker.ImagePicker;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 
 import frlgrd.animatededittext.AnimatedEditText;
 
@@ -43,9 +50,19 @@ public class AddNewProductActivity extends AppCompatActivity {
     public static final String USER = "Anonymous";
 
     // adding realtime firebase database
-    FirebaseDatabase mDatabase;
+    private FirebaseDatabase mDatabase;
     // creating database reference to store the name, description and category
-    DatabaseReference mProductsReference;
+    private DatabaseReference mProductsReference;
+    // adding firebase storage
+    private FirebaseStorage mStorage;
+    // creating storage reference
+    private StorageReference mProductPhotoReference;
+
+    //string literal to store the Uri of photo
+    private String mProductPhotoUri;
+
+//    // creating a Product object
+//    private Products mProduct;
 
 
     @Override
@@ -64,29 +81,8 @@ public class AddNewProductActivity extends AppCompatActivity {
         // adding functionality to the database and its reference
         mDatabase = FirebaseDatabase.getInstance();
         mProductsReference = mDatabase.getReference().child("Products");
-
-        //adding functionality to mSaveButton
-        mSaveButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                // creating Products objects
-                Products product = new Products(mProductItemName.getText().toString(),mProductCategory,mProductItemDescription.getText().toString(),null);
-                // entering these values in database
-                mProductsReference.push().setValue(product);
-                finish();
-            }
-        });
-
-
-
-
-        // setting up the spinner
-        setupSpinner();
-
-        // adding some empty photo to preview image view
-        if(mPreviewImage.getDrawable()==null){
-            mPreviewImage.setImageResource(R.drawable.folder_icon);
-        }
+        mStorage = FirebaseStorage.getInstance();
+        mProductPhotoReference = mStorage.getReference().child("Products_Photos");
 
         // setting photo picker to the text view
         mPhotoPicker.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +97,26 @@ public class AddNewProductActivity extends AppCompatActivity {
             }
         });
 
+        //adding functionality to mSaveButton
+        mSaveButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // creating Products objects
+                Products product = new Products(mProductItemName.getText().toString(),mProductCategory,mProductItemDescription.getText().toString(),mProductPhotoUri);
+                // entering these values in database
+                mProductsReference.push().setValue(product);
+                finish();
+            }
+        });
+
+        // setting up the spinner
+        setupSpinner();
+
+        // adding some empty photo to preview image view
+        if(mPreviewImage.getDrawable()==null){
+            mPreviewImage.setImageResource(R.drawable.folder_icon);
+        }
+
     }
 
     @Override
@@ -111,6 +127,37 @@ public class AddNewProductActivity extends AppCompatActivity {
             Uri uri = data.getData();
             // Use Uri object instead of File to avoid storage permissions
             mPreviewImage.setImageURI(uri);
+            // creating a child of storage reference
+            StorageReference photoRef = mProductPhotoReference.child(uri.getLastPathSegment());
+            photoRef.putFile(uri).addOnSuccessListener(this, new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    // here we extract the URI of the uploaded image on firebase to store it in the realtime database
+                    if (taskSnapshot.getMetadata() != null) {
+                        if (taskSnapshot.getMetadata().getReference() != null) {
+                            Task<Uri> result = taskSnapshot.getStorage().getDownloadUrl();
+                            result.addOnSuccessListener(new OnSuccessListener<Uri>() {
+                                @Override
+                                public void onSuccess(Uri uri) {
+                                    String downloadedUri = uri.toString();
+                                    mProductPhotoUri = downloadedUri;
+                                }
+                            });
+                            result.addOnFailureListener(new OnFailureListener() {
+                                @Override
+                                public void onFailure(@NonNull Exception e) {
+                                    Log.e("AddNewProductActivity","Download Uri cannot be achieved");
+                                }
+                            });
+                        }
+                    }
+                }}).addOnFailureListener(this, new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    Log.e("AddNewProductActivity","Photo could not be put storage");
+                }
+            });
+
         } else if (resultCode == ImagePicker.RESULT_ERROR) {
             Toast.makeText(this, ImagePicker.getError(data), Toast.LENGTH_SHORT).show();
         } else {
