@@ -5,16 +5,13 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <frlgrd.animatededittext.AnimatedEditText
+    <EditText
         android:id="@+id/product_item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        app:editTextIcon="@drawable/arrow_icon"
         app:editTextInputType="name"
-        app:hintText="Item_Name"/>
-
-
+        android:hint="@string/item_name"/>
 
         <Spinner
             android:id="@+id/product_item_category"
@@ -24,14 +21,13 @@
             android:layout_height="wrap_content"/>
 
 
-    <frlgrd.animatededittext.AnimatedEditText
+    <EditText
         android:id="@+id/product_item_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        app:editTextIcon="@drawable/arrow_icon"
-        app:editTextInputType="name"
-        app:hintText="Item_Description"/>
+        android:inputType="textMultiLine"
+        android:hint="@string/item_description"/>
 
     <TextView
         android:id="@+id/product_item_image"

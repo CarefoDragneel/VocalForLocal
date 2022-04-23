@@ -26,5 +26,7 @@
     <string name="Beauty_Products">Beauty Products</string>
     <string name="Footwear">Footwear</string>
     <string name="Sports">Sports</string>
+    <string name="item_description">Item_Description</string>
+    <string name="item_name">Item_Name</string>
 
 </resources>

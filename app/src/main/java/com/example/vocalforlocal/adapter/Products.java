@@ -3,16 +3,23 @@ package com.example.vocalforlocal.adapter;
 public class Products {
 
     // item name
-    private String product_item_name;
+    private String product_item_name="";
 
     // item description
-    private String product_item_description;
+    private String product_item_description="";
 
     // item photo
-    private int product_item_photo;
+    private String product_item_photo_url="";
 
     // item category
-    private int product_item_category;
+    private int product_item_category=0;
+
+    //item price
+    private int product_item_price;
+
+    //item location: latitude and longitude
+    private int product_item_latitude;
+    private int product_item_longitude;
 
     // categories int value
     public final static int CLOTHING = 0;
@@ -21,10 +28,13 @@ public class Products {
     public final static int FOOTWEAR = 3;
     public final static int SPORTS = 4;
 
-    public Products(String n,String d,int p){
+    public Products(){}
+
+    public Products(String n,int c,String d,String p){
         product_item_name = n;
+        product_item_category = c;
         product_item_description = d;
-        product_item_photo = p;
+        product_item_photo_url = p;
     }
 
     public String getProduct_item_name() {
@@ -35,9 +45,11 @@ public class Products {
         return product_item_description;
     }
 
-    public int getProduct_item_photo() {
-        return product_item_photo;
+    public String getProduct_item_photo() {
+        return product_item_photo_url;
     }
 
-
+    public int getProduct_item_category() {
+        return product_item_category;
+    }
 }
