@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         bottomNavigation.show(1, true);
-
+      
         /*----------------------hooks---------------------- */
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
