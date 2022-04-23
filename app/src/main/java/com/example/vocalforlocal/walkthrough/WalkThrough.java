@@ -28,7 +28,7 @@ public class WalkThrough extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_walk_through);
-        getSupportActionBar().hide();
+//        getSupportActionBar().hide();
 
 
         backbtn = findViewById(R.id.backButton);
