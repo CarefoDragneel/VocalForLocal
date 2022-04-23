@@ -20,4 +20,11 @@
     <string name="pick_the_image">Pick the Image</string>
     <string name="product_item_save">Save</string>
 
+    //category strings
+    <string name="Clothing">Clothing</string>
+    <string name="Electronics">Electronics</string>
+    <string name="Beauty_Products">Beauty Products</string>
+    <string name="Footwear">Footwear</string>
+    <string name="Sports">Sports</string>
+
 </resources>
