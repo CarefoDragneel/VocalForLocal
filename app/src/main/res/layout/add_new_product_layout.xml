@@ -5,33 +5,29 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <frlgrd.animatededittext.AnimatedEditText
+    <EditText
         android:id="@+id/product_item_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        app:editTextIcon="@drawable/arrow_icon"
         app:editTextInputType="name"
-        app:hintText="Item_Name"/>
+        android:hint="@string/item_name"/>
+
+    <Spinner
+        android:id="@+id/product_item_category"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:padding="2dp"
+        android:layout_height="wrap_content"/>
 
 
-
-        <Spinner
-            android:id="@+id/product_item_category"
-            android:layout_width="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:padding="2dp"
-            android:layout_height="wrap_content"/>
-
-
-    <frlgrd.animatededittext.AnimatedEditText
+    <EditText
         android:id="@+id/product_item_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        app:editTextIcon="@drawable/arrow_icon"
-        app:editTextInputType="name"
-        app:hintText="Item_Description"/>
+        android:inputType="textMultiLine"
+        android:hint="@string/item_description"/>
 
     <TextView
         android:id="@+id/product_item_image"
@@ -39,6 +35,7 @@
         android:layout_height="wrap_content"
         android:padding="2dp"
         android:layout_marginLeft="20dp"
+        android:textColor="@color/green_800"
         android:text="@string/pick_the_image"
         app:drawableLeftCompat="@drawable/add_photo_icon" />
 
