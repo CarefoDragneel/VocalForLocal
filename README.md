@@ -4,7 +4,7 @@
 
 **Project PPT:** [https://drive.google.com/file/d/1gvYzTjUQUUd_6MVyY4FU868m27R587rC/view?usp=sharing](https://drive.google.com/file/d/1gvYzTjUQUUd_6MVyY4FU868m27R587rC/view?usp=sharing)
 
-**Get APK from:** [https://github.com/ashu12chi/RiseUp/releases/tag/1.0](https://github.com/ashu12chi/RiseUp/releases/tag/1.0)
+**Get APK from:** [https://github.com/CarefoDragneel/VocalForLocal_hack36/blob/main/app-debug.apk)
 
 
 ## Introduction:
